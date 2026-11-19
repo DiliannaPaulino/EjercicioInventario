@@ -13,7 +13,7 @@ namespace TiendaBarrio
         {
             int opcion = 0;
 
-            while (opcion != 8)
+            while (opcion != 7)
             {
                 Console.WriteLine("\n=== INVENTARIO DE PRODUCTOS ===");
                 Console.WriteLine("1. Registrar Psroductos");
