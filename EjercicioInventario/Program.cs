@@ -1,6 +1,6 @@
-﻿using System.Diagnostics.Tracing;
-using System.Runtime.Serialization.Formatters;
+﻿using System;
 using System.Linq;
+
 
 namespace TiendaBarrio
 {
@@ -12,8 +12,9 @@ namespace TiendaBarrio
         static void Main(string[] args)
         {
             int opcion = 0;
+            
 
-            while (opcion != 7)
+            while (opcion != 8)
             {
                 Console.WriteLine("\n=== INVENTARIO DE PRODUCTOS ===");
                 Console.WriteLine("1. Registrar Psroductos");
@@ -22,11 +23,13 @@ namespace TiendaBarrio
                 Console.WriteLine("4. Modificar Producto");
                 Console.WriteLine("5. Eliminar Producto");
                 Console.WriteLine("6. Estadisticas");
-                Console.WriteLine("7. Salir");
-                Console.WriteLine("8. Ordenar Productos");
+                Console.WriteLine("7. Ordenar Productos");
+                Console.WriteLine("8. Salir");
 
                 Console.WriteLine("Seleccione: ");
                 opcion = Convert.ToInt32(Console.ReadLine());
+
+               
 
                 switch (opcion)
                 {
@@ -55,13 +58,22 @@ namespace TiendaBarrio
                         break;
 
                     case 7:
+
+                        OrdenarProductos();
+                        break;
+                        
+
+                    case 8:
                         Console.WriteLine("hasta pronto");
                         break;
 
-                    case 8:
-                        OrdenarProductos();
-                        break;
-                }
+                    default :
+                        
+                        Console.WriteLine("Opcion invalida");
+
+                        return;
+                } 
+
             }
         }
 
@@ -101,7 +113,9 @@ namespace TiendaBarrio
             precios.Add(precio);
 
             Console.WriteLine("Poducto agregado");
+      
         }
+
 
 
         /// Mostrar el nombre y precio del producto.
