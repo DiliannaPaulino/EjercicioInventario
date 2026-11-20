@@ -22,8 +22,8 @@ namespace TiendaBarrio
                 Console.WriteLine("4. Modificar Producto");
                 Console.WriteLine("5. Eliminar Producto");
                 Console.WriteLine("6. Estadisticas");
-                Console.WriteLine("7. Salir");
-                Console.WriteLine("8. Ordenar Productos");
+                Console.WriteLine("7. Ordenar Productos");
+                Console.WriteLine("8. Sali");
 
                 Console.WriteLine("Seleccione: ");
                 opcion = Convert.ToInt32(Console.ReadLine());
@@ -55,12 +55,18 @@ namespace TiendaBarrio
                         break;
 
                     case 7:
-                        Console.WriteLine("hasta pronto");
+                        OrdenarProductos();
                         break;
 
                     case 8:
-                        OrdenarProductos();
+                         Console.WriteLine("hasta pronto");;
                         break;
+
+                         default :
+     
+                         Console.WriteLine("Opcion invalida");
+       
+     return;
                 }
             }
         }
